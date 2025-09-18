@@ -1,0 +1,259 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head> 
+
+    <meta charset="UTF-8"> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <title>Computer Science Brochure</title> 
+
+    <script src="https://cdn.tailwindcss.com"></script> 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
+
+    <style> 
+
+        body { 
+
+            font-family: 'Inter', sans-serif; 
+
+        } 
+
+        .hero-bg { 
+
+            background: linear-gradient(45deg, #1f2937, #374151); 
+
+        } 
+
+        .section-bg { 
+
+            background-color: #f9fafb; 
+
+        } 
+
+        .card-shadow { 
+
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
+
+        } 
+
+        .btn-primary { 
+
+            background-color: #3b82f6; 
+
+            transition: background-color 0.3s; 
+
+        } 
+
+        .btn-primary:hover { 
+
+            background-color: #2563eb; 
+
+        } 
+
+        .fade-in { 
+
+            animation: fadeIn 1s ease-in-out; 
+
+        } 
+
+        @keyframes fadeIn { 
+
+            from { opacity: 0; transform: translateY(20px); } 
+
+            to { opacity: 1; transform: translateY(0); } 
+
+        } 
+
+        .scroll-top { 
+
+            display: none; 
+
+            position: fixed; 
+
+            bottom: 20px; 
+
+            right: 20px; 
+
+            z-index: 1000; 
+
+        } 
+
+        .scroll-top.show { 
+
+            display: block; 
+
+        } 
+
+    </style> 
+
+</head> 
+
+<body class="text-gray-800 bg-white"> 
+
+    <!-- Header --> 
+
+    <header class="bg-gray-900 text-white p-4 sticky top-0 z-50"> 
+
+        <nav class="container mx-auto flex justify-between items-center"> 
+
+            <h1 class="text-2xl font-bold"><i class="fas fa-laptop-code mr-2"></i>CS Brochure</h1> 
+
+            <ul class="hidden md:flex space-x-6"> 
+
+                <li><a href="#hero" class="hover:text-blue-400">Home</a></li> 
+
+                <li><a href="#intro" class="hover:text-blue-400">Introduction</a></li> 
+
+                <li><a href="#branches" class="hover:text-blue-400">Branches</a></li> 
+
+                <li><a href="#skills" class="hover:text-blue-400">Skills</a></li> 
+
+                <li><a href="#careers" class="hover:text-blue-400">Careers</a></li> 
+
+                <li><a href="#resources" class="hover:text-blue-400">Resources</a></li> 
+
+                <li><a href="#contact" class="hover:text-blue-400">Contact</a></li> 
+
+            </ul> 
+
+            <button id="menu-btn" class="md:hidden"><i class="fas fa-bars"></i></button> 
+
+        </nav> 
+
+        <!-- Mobile Menu --> 
+
+        <nav id="mobile-menu" class="hidden md:hidden bg-gray-800 mt-4 p-4 rounded"> 
+
+            <ul class="space-y-4"> 
+
+                <li><a href="#hero" class="hover:text-blue-400">Home</a></li> 
+
+                <li><a href="#intro" class="hover:text-blue-400">Introduction</a></li> 
+
+                <li><a href="#branches" class="hover:text-blue-400">Branches</a></li> 
+
+                <li><a href="#skills" class="hover:text-blue-400">Skills</a></li> 
+
+                <li><a href="#careers" class="hover:text-blue-400">Careers</a></li> 
+
+                <li><a href="#resources" class="hover:text-blue-400">Resources</a></li> 
+
+                <li><a href="#contact" class="hover:text-blue-400">Contact</a></li> 
+
+            </ul> 
+
+        </nav> 
+
+    </header> 
+
+ 
+
+    <!-- Hero Section --> 
+
+    <section id="hero" class="hero-bg text-white py-20 relative overflow-hidden"> 
+
+        <div class="container mx-auto text-center px-4 fade-in"> 
+
+            <h2 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Computer Science</h2> 
+
+            <p class="text-xl md:text-2xl mb-8">Explore the Digital Universe: From Algorithms to Artificial Intelligence</p> 
+
+            <a href="#intro" class="btn-primary text-white px-6 py-3 rounded-full font-semibold"><i class="fas fa-arrow-down mr-2"></i>Learn More</a> 
+
+            <div class="mt-10 max-w-4xl mx-auto"> 
+
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0ec05739-b547-4f08-be56-d14c57860d9f.png" alt="Futuristic digital landscape with interconnected nodes representing data flow, glowing circuits, and abstract representations of algorithms evolving into neural networks in a cosmic background with vibrant neon lights and holographic screens displaying code snippets" class="w-full h-auto rounded-lg shadow-lg" onerror="this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4fa354d2-f788-44cd-98de-b46e511ff3f3.png'"> 
+
+            </div> 
+
+        </div> 
+
+        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-10"></div> 
+
+    </section> 
+
+ 
+
+    <!-- Introduction Section --> 
+
+    <section id="intro" class="section-bg py-16"> 
+
+        <div class="container mx-auto px-4 fade-in"> 
+
+            <div class="flex flex-col md:flex-row items-center"> 
+
+                <div class="md:w-1/2 mb-8 md:mb-0"> 
+
+                    <h3 class="text-3xl font-bold mb-6">What is Computer Science?</h3> 
+
+                    <p class="text-lg leading-relaxed">Computer Science is the study of computers and computational systems, encompassing software design, data algorithms, artificial intelligence, and the theoretical foundations of information and computation. From coding applications to creating the next generation of technology, CS is at the heart of innovation.</p> 
+
+                    <p class="mt-4">Dive into a field that shapes our future: secure data, automate processes, and push the boundaries of what's possible with machines.</p> 
+
+                </div> 
+
+                <div class="md:w-1/2 text-center"> 
+
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9d45a822-ef58-4366-9ac3-175a18622d4e.png" alt="Vibrant illustration of a programmer at a desk with multiple monitors showing flowing code syntax in colorful syntax highlighting, surrounded by floating icons of programming languages like Python, Java, and C++, with light rays emanating from the screens signifying creativity and logic" class="w-full h-auto rounded shadow-lg" onerror="this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/444ac464-6984-46db-8e52-23c017eea136.png?text=Image+Unavailable'"> 
+
+                </div> 
+
+            </div> 
+
+        </div> 
+
+    </section> 
+
+ 
+
+    <!-- Branches Section --> 
+
+    <section id="branches" class="py-16"> 
+
+        <div class="container mx-auto px-4 fade-in"> 
+
+            <h3 class="text-3xl font-bold text-center mb-12">Key Branches of Computer Science</h3> 
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> 
+
+                <div class="card-shadow p-6 rounded-lg bg-white"> 
+
+                    <i class="fas fa-brain text-4xl text-blue-500 mb-4"></i> 
+
+                    <h4 class="text-xl font-semibold mb-3">Artificial Intelligence</h4> 
+
+                    <p class="text-gray-600">Explore machine learning, neural networks, and robotics to create intelligent systems that mimic human cognition.</p> 
+
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7af4bf76-b229-4bcc-b0fc-e5a7c4cb1323.png" alt="Abstract representation of artificial intelligence as a glowing brain made of interconnected gears and circuits, with data streams visualized as flowing particles, set in a futuristic lab environment with holographic projections of robots and decision trees" class="w-full h-48 object-cover rounded mt-4" onerror="this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0879e604-f7b6-4ebf-a3b4-ca994ecdc181.png?text=Image+Unavailable'"> 
+
+                </div> 
+
+                <div class="card-shadow p-6 rounded-lg bg-white"> 
+
+                    <i class="fas fa-shield-alt text-4xl text-green-500 mb-4"></i> 
+
+                    <h4 class="text-xl font-semibold mb-3">Cybersecurity</h4> 
+
+                    <p class="text-gray-600">Protect digital assets from threats, learn cryptography, and ethical hacking to safeguard information in the modern world.</p> 
+
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ca465af8-2a05-47fd-9a57-7cbcdf9f95ed.png" alt="Detailed lock icon embodied as a fortress surrounded by digital chains and encrypted code overlays, with cyber intruders visualized as shadowy figures attempting to break through firewalls, in a high-tech security control room atmosphere" class="w-full h-48 object-cover rounded mt-4" onerror="this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2276df0d-fd57-4336-900e-a036d1dd0632.png'"> 
+
+                </div> 
+
+                <div class="card-shadow p-6 rounded-lg bg-white"> 
+
+                    <i class="fas fa-database text-4xl text-purple-500 mb-4"></i> 
+
+                    <h4 class="text-xl font-semibold mb-3">Data Science</h4> 
+
+                    <p class="text-gray-600">Analyze vast data sets with statistics and machine learning to derive insights and drive data-informed decisions.</p> 
+
+                    <img src="https://placehold.co/400x300" alt="Visualization of data science workspace with floating charts, graphs, and data points connected in clusters, illustrated as constellations of stars with algorithmic paths glowing in neon colors on a dark background representing depth" class="w-full h-48 object-cover rounded mt-4" onerror="this.src='https://placehold.co/400x300?text=Image+Unavailable'"> 
+
+                </div> 
+
+            </div> 
